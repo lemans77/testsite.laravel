@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+require('laravel-mix-favicon');
 
 /*
  |--------------------------------------------------------------------------
@@ -13,4 +14,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
-    .sourceMaps();
+    .sourceMaps()
+    .favicon({
+        blade: 'resources/views/layouts/favicon.blade.php',
+    });
